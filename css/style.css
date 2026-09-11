@@ -1,0 +1,263 @@
+@charset 'utf-8';
+
+body {
+  font-family: Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,
+    sans-serif;
+}
+a {
+  color: #333;
+}
+/*===============================================
+header
+===============================================*/
+header .logo {
+  width: 280px;
+  margin: 50px auto;
+  transition: opacity 0.2s ease;
+}
+header .logo:hover {
+  opacity: 0.8;
+}
+.logo img {
+  width: 100%;
+}
+.mainvisual {
+  width: 100%;
+}
+.mainvisual img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+nav {
+  padding-top: 40px;
+}
+nav ul {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+}
+nav ul li {
+  font-size: 18px;
+  color: #333;
+  letter-spacing: 0.1rem;
+  transition: opacity 0.2s ease;
+}
+nav ul li:hover {
+  opacity: 0.8;
+}
+/*===============================================
+concept
+===============================================*/
+.concept {
+  display: flex;
+  max-width: 1170px;
+  margin: 90px auto 0;
+  padding: 0 30px;
+}
+.concept .image {
+  width: 50%;
+}
+.concept img {
+  width: 100%;
+}
+.concept-text {
+  width: 50%;
+  margin: auto 0;
+  letter-spacing: 0.1em;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+.concept-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+}
+.concept-text p:first-child {
+  margin-bottom: 20px;
+}
+.concept-text h2 {
+  font-size: 32px;
+  color: #24a8bf;
+  margin-bottom: 30px;
+}
+/*============================================
+blog
+============================================*/
+.blog {
+  max-width: 1170px;
+  margin-top: 90px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 30px;
+}
+.blog-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.blog-title h2 {
+  font-size: 32px;
+  color: #24a8bf;
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
+}
+.blog-title p {
+  font-size: 13px;
+  font-weight: bold;
+}
+.blog-contents {
+  margin-bottom: 40px;
+}
+.blog-contents ul {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.blog-contents ul li {
+  width: calc((100% - 60px) / 3);
+  transition: opacity 0.2s ease;
+}
+.blog-contents ul li:hover {
+  opacity: 0.6;
+}
+.blog-contents ul li img {
+  width: 100%;
+  margin-bottom: 12px;
+}
+.blog-contents ul li h3 {
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #333;
+}
+.blog-contents ul li p {
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #333;
+}
+.btn {
+  text-align: center;
+}
+.btn a {
+  position: relative;
+  color: #24a8bf;
+  border: 1px solid #24a8bf;
+  border-radius: 3px;
+  padding: 18px 72px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: opacity 0.2s ease;
+}
+.btn a:hover {
+  opacity: 0.8;
+}
+.btn a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  width: 5px;
+  height: 9px;
+  transform: translateY(-50%);
+  background-image: url(../img/icon_arrow-right.png);
+  background-repeat: no-repeat;
+  background-size: 6px 9px;
+}
+/*==========================================
+footer
+==========================================*/
+footer {
+  text-align: center;
+  background-color: #000;
+  margin-top: 50px;
+  padding: 20px 0 30px;
+}
+footer .logo {
+  width: 180px;
+  margin: 50px auto;
+}
+footer p {
+  color: #8b8b8b;
+  font-size: 12px;
+}
+
+/*=========================================
+responsive
+========================================*/
+@media screen and (max-width: 768px) {
+  header .logo {
+    width: 160px;
+    margin: 30px auto;
+  }
+  nav ul {
+    gap: 50px;
+  }
+  nav ul li {
+    font-size: 16px;
+  }
+  .concept {
+    margin-top: 70px;
+    padding: 0 20px;
+    flex-direction: column;
+  }
+  .concept .image,
+  .concept-text {
+    width: 100%;
+  }
+  .concept img {
+    width: 100%;
+  }
+  .concept-text {
+    padding: 0;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .concept-text h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .concept-text p {
+    font-size: 15px;
+  }
+  .concept-text p:first-child {
+    margin-bottom: 15px;
+  }
+  .blog {
+    padding: 0 20px;
+  }
+  .blog-title {
+    margin-bottom: 28px;
+  }
+  .blog-title h2 {
+    margin-bottom: 3px;
+    font-size: 30px;
+  }
+  .blog-title p {
+    font-size: 12px;
+  }
+  .blog-contents {
+    margin-bottom: 20px;
+  }
+  .blog-contents ul {
+    flex-direction: column;
+    gap: 17px;
+  }
+  .blog-contents ul li {
+    width: 100%;
+  }
+  .btn a {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding: 15px 0;
+  }
+  footer .logo {
+    width: 100px;
+    margin: 40px auto;
+  }
+  footer p {
+    font-size: 10px;
+  }
+}
